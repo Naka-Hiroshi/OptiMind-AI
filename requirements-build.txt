@@ -1,0 +1,4 @@
+# Building the installer (packaging/build.ps1): the app's own requirements plus Nuitka, which
+# compiles OptiMind.exe to machine code (the first build downloads its C compiler, GCC from winlibs).
+-r requirements.txt
+nuitka==4.2.2

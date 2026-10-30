@@ -1,0 +1,84 @@
+
+== Build tools
+OptiMind AI 2.4.0 | Python: C:\Users\erikn\Downloads\Projects\optimind-ai\.venv\Scripts\python.exe | Inno Setup: C:\Users\erikn\AppData\Local/Programs/Inno Setup 7/ISCC.exe
+
+== Icon and installer images
+icon: C:\Users\erikn\Downloads\Projects\optimind-ai\app\static\optimind.ico
+installer images: 7 side panels, 7 corner logos in C:\Users\erikn\Downloads\Projects\optimind-ai\packaging\assets
+
+== Bundled tools (PresentMon) and esbuild, checked against their pinned SHA-256
+C:\Users\erikn\Downloads\Projects\optimind-ai\tools\PresentMon.exe: already there (checked)
+C:\Users\erikn\Downloads\Projects\optimind-ai\build\tools\esbuild.exe: already there (checked)
+
+== Code ready for compiling (docstrings emptied, the window's page minified)
+C:\Users\erikn\Downloads\Projects\optimind-ai\build\src: 71 source files without docstrings; the window's page minified from 335 KB to 248 KB
+
+== OptiMind.exe (compiled with Nuitka)
+powershell : Nuitka-Options: Used command line options:
+At C:\Users\erikn\Downloads\Projects\optimind-ai\run_build.ps1:1 char:1
++ powershell -ExecutionPolicy Bypass -File packaging\build.ps1 -SkipTes ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Nuitka-Options:...d line options::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Nuitka-Options:   run.py --standalone --assume-yes-for-downloads --mingw64 --lto=no --remove-output 
+--output-dir=C:\Users\erikn\Downloads\Projects\optimind-ai\build\nuitka --output-filename=OptiMind.exe 
+--windows-console-mode=disable 
+--windows-icon-from-ico=C:\Users\erikn\Downloads\Projects\optimind-ai\app\static\optimind.ico --company-name="OptiMind 
+AI" --product-name="OptiMind AI" --file-description="OptiMind AI" --copyright="OptiMind AI" --file-version=2.4.0.0 
+--product-version=2.4.0.0 --include-package=app --include-module=optimind_page --include-module=pystray._win32 
+--include-module=win32timezone --include-module=pynvml --include-module=win32api --include-module=win32service 
+--include-data-files=app\static\optimind.ico=app\static\optimind.ico --include-data-files=app\i18n\*.json=app/i18n/ 
+--include-data-files=C:\Users\erikn\Downloads\Projects\optimind-ai\tools\PresentMon.exe=tools\PresentMon.exe --nofollow
+-import-to=tkinter,watchfiles,websockets,PyQt5,PyQt6,PySide2,PySide6,qtpy,gi,cefpython3,win32ui,pywin,setuptools,pkg_re
+sources --report=C:\Users\erikn\Downloads\Projects\optimind-ai\build\nuitka\compilation-report.xml
+Nuitka: Starting Python compilation with:
+Nuitka:   Version '4.2.2' on Python 3.12 (flavor 'CPython Official') commercial grade 'not installed'.
+Nuitka:WARNING: Nuitka '4.2.2' is older than the latest stable release '4.3.1'.
+Nuitka:WARNING:     Complex topic! More information can be found at 
+[94mhttps://nuitka.net/info/outdated-nuitka-version.html[0m
+Nuitka-Plugins:anti-bloat: Not including 'PIL.ImageQt' automatically in order to avoid bloat, but this may cause: PIL 
+will not be able to create Qt image objects.
+Nuitka-Plugins:dll-files: Found 1 file DLLs from clr_loader.ffi installation.
+Nuitka-Plugins:dll-files: Found 4 files DLLs from webview installation.
+Nuitka: Completed Python level compilation and optimization.
+Nuitka: Generating source code for C backend compiler.
+Nuitka: Running data composer tool for optimal constant value handling.
+Nuitka: Running C compilation via Scons.
+Nuitka-Scons: Backend C compiler: gcc (gcc 15.2.0).
+Nuitka-Scons: Backend C linking with 584 files (no progress information available for this stage).
+Nuitka-Scons: Compiled 584 C files using ccache.
+Nuitka-Scons: Cached C files (using ccache) with result 'cache hit': 580
+Nuitka-Scons: Cached C files (using ccache) with result 'cache miss': 4
+Nuitka-Postprocessing: Adding 10 icon(s) from icon file 
+'C:\Users\erikn\Downloads\Projects\optimind-ai\app\static\optimind.ico'.
+Nuitka-Options: Included data file 'app\static\optimind.ico' due to specified data file 
+'app\static\optimind.ico=app\static\optimind.ico' on command line.
+Nuitka-Options: Included 11 data files due to specified data file 'app\i18n\*.json=app/i18n/' on command line.
+Nuitka-Options: Included data file 'tools\PresentMon.exe' due to specified data file 
+'C:\Users\erikn\Downloads\Projects\optimind-ai\tools\PresentMon.exe=tools\PresentMon.exe' on command line.
+Nuitka-Plugins:data-files: Included data file 'certifi\cacert.pem' due to package data for 'certifi'.
+Nuitka-Plugins:data-files: Included data file 'pythonnet\runtime\Python.Runtime.dll' due to package data for 
+'pythonnet'.
+Nuitka-Plugins:data-files: Included data file 'webview\js\api.js' due to package data directory 'js' for 'webview'.
+Nuitka-Plugins:data-files: Included data file 'webview\js\customize.js' due to package data directory 'js' for 
+'webview'.
+Nuitka-Plugins:data-files: Included data file 'webview\js\finish.js' due to package data directory 'js' for 'webview'.
+Nuitka-Plugins:data-files: Included data file 'webview\js\state.js' due to package data directory 'js' for 'webview'.
+Nuitka-Plugins:data-files: Included data file 'webview\js\lib\dom_json.js' due to package data directory 'js' for 
+'webview'.
+Nuitka-Plugins:data-files: Included data file 'webview\js\lib\polyfill.js' due to package data directory 'js' for 
+'webview'.
+Nuitka-Plugins:data-files: Included data file 'webview\lib\pywebview-android.jar' due to package data directory 'lib' 
+for 'webview'.
+Nuitka: Removing build directory 'C:\Users\erikn\Downloads\Projects\optimind-ai\build\nuitka\run.build'.
+Nuitka: Successfully created '~\Downloads\Projects\optimind-ai\build\nuitka\run.dist\OptiMind.exe'.
+Nuitka-Reports: Compilation report written to file 
+'C:\Users\erikn\Downloads\Projects\optimind-ai\build\nuitka\compilation-report.xml'.
+
+== Open-source licenses
+build\dist\OptiMind\THIRD-PARTY-NOTICES.txt: Python, 34 packages and 1 bundled tool
+
+== Installer (Inno Setup)
+
+Done: C:\Users\erikn\Downloads\Projects\optimind-ai\dist\OptiMind-AI-Setup-2.4.0.exe (24.8 MB)

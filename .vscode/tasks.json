@@ -1,0 +1,84 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run full test suite",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["-m", "unittest", "discover", "-s", "tests", "-v"],
+            "cwd": "${workspaceFolder}",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Runs the complete OptiMind AI test suite (all test modules)"
+        },
+        {
+            "label": "Run API tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["-m", "unittest", "tests.test_api", "-v"],
+            "cwd": "${workspaceFolder}",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Runs only the API endpoint tests (test_api.py)"
+        },
+        {
+            "label": "Run close_app tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["-m", "unittest", "tests.test_close_app", "-v"],
+            "cwd": "${workspaceFolder}",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Runs only the app-closing tests (test_close_app.py)"
+        },
+        {
+            "label": "Run desktop tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["-m", "unittest", "tests.test_desktop", "-v"],
+            "cwd": "${workspaceFolder}",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Runs only the desktop app tests (test_desktop.py)"
+        },
+        {
+            "label": "Run drivers tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["-m", "unittest", "tests.test_drivers", "-v"],
+            "cwd": "${workspaceFolder}",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Runs only the driver backup/restore tests (test_drivers.py)"
+        },
+        {
+            "label": "Run safety tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["-m", "unittest", "tests.test_safety", "-v"],
+            "cwd": "${workspaceFolder}",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Runs only the agent safety tests (test_safety.py)"
+        },
+        {
+            "label": "Build release (Nuitka + Inno Setup)",
+            "type": "shell",
+            "command": "powershell",
+            "args": ["-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/run_build.ps1", "-SkipTests", "-Iscc", "C:\\Users\\erikn\\AppData\\Local\\Programs\\Inno Setup 7\\ISCC.exe"],
+            "cwd": "${workspaceFolder}",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Builds the Nuitka release and Inno Setup installer (OptiMind-AI-Setup-2.4.0.exe)"
+        },
+        {
+            "label": "Lint check (pylint)",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["-m", "pylint", "app", "tests", "--score"],
+            "cwd": "${workspaceFolder}",
+            "problemMatcher": ["$pylint"],
+            "detail": "Runs pylint on app/ and tests/ source"
+        }
+    ]
+}

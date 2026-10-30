@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# Your settings and OptiMind's data (API keys, logs, history, tweak backups)
+.env
+data/
+logs/
+
+# Made by packaging/build.ps1 (the installer is in dist/)
+build/
+dist/
+packaging/assets/
+
+# Downloaded and checked by packaging/get_tools.py (PresentMon)
+tools/

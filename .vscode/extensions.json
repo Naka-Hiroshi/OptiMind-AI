@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.pylint",
+        "ms-python.debugpy",
+        "ms-vscode.vscode-serial-monitor"
+    ],
+    "unwantedRecommendations": []
+}

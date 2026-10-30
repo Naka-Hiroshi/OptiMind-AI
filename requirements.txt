@@ -1,0 +1,24 @@
+# --- Core runtime ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+
+# --- System monitoring / optimization (Windows) ---
+psutil==6.0.0
+pywin32==306 ; sys_platform == "win32"
+WMI==1.5.1 ; sys_platform == "win32"
+# NVIDIA graphics cards' own sensors (temperature, clocks, power) through the driver's NVML; read-only
+nvidia-ml-py==13.615.71 ; sys_platform == "win32"
+
+# --- Notification-area (tray) icon ---
+pystray==0.19.5
+Pillow==10.4.0
+
+# --- OptiMind's window (WebView2, built into Windows 11) ---
+pywebview==6.2.1 ; sys_platform == "win32"
+pythonnet==3.1.0 ; sys_platform == "win32"
+
+# --- HTTP client (calls the free AI providers: Gemini, Groq, Ollama) ---
+httpx==0.27.2
