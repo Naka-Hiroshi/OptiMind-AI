@@ -6,7 +6,7 @@ OptiMind AI keeps Windows 11 responsive. It gives the app you're using the PC fi
 
 ## Download
 
-Get **OptiMind-AI-Setup-2.5.0.exe** from the [newest release](https://github.com/Naka-Hiroshi/OptiMind-AI/releases/latest), run it and follow Setup. It works on any Windows 11 PC or laptop (64-bit).
+Get **OptiMind-AI-Setup-2.6.1.exe** from the [newest release](https://github.com/Naka-Hiroshi/OptiMind-AI/releases/latest), run it and follow Setup. It works on any Windows 11 PC or laptop (64-bit).
 
 - Windows may show "Windows protected your PC", because the file isn't signed with a paid certificate: click **More info**, then **Run anyway**.
 - Each release lists the Setup file's SHA-256. To check your download, open Terminal in the folder with the file, run `(Get-FileHash .\OptiMind-AI-Setup-2.6.1.exe).Hash` and compare the two.
